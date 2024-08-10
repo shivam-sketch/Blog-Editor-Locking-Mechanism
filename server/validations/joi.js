@@ -25,15 +25,9 @@ const updateBlogValidation = {
   }),
 };
 
-const deleteBookValidation = {
-  body: Joi.object().keys({
-    id: Joi.string().required().custom(isValidObjectId),
-  }),
-};
 
 export {
   registerUserValidation,
   loginUserValidation,
   updateBlogValidation,
-  deleteBookValidation,
 };

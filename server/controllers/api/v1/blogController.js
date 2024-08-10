@@ -16,17 +16,16 @@ import {
   ForbiddenError,
   NotFoundError,
 } from "../../../exceptions/app-exceptions.js";
-import { passwordHasher } from "../../../utils/helper.js";
-import UserModel from "../../../Model/User.model.js";
+
 
 import BlogsModel from "../../../Model/Blogs.model.js";
 export async function addBlog(req, res, next) {
   try {
-    const book = new BlogsModel(req.body);
-    await book.save();
+    const blog = new BlogsModel(req.body);
+    await blog.save();
     return HttpResponse.sendAPIResponse(
       res,
-      book,
+      blog,
       HTTP_CREATED,
       "Blog Added Successful."
     );
@@ -73,11 +72,11 @@ export async function updateBlog(req, res, next) {
 
 export async function getBlog(req, res, next) {
   try {
-    const books = await BlogsModel.find({}).populate("lastEditedBy", "name");
+    const blogs = await BlogsModel.find({}).populate("lastEditedBy", "name");
 
     return HttpResponse.sendAPIResponse(
       res,
-      books,
+      blogs,
       HTTP_CREATED,
       "Blogs Fetched Successfuly."
     );
