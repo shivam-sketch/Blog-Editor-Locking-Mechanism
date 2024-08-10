@@ -34,16 +34,16 @@ export default router;
  *       properties:
  *         email:
  *           type: string
- *           default: "sstest2@yopmail.com"
+ *           default: "sstest3@yopmail.com"
  *         password:
  *           type: string
- *           default: "123456"
+ *           default: "12345"
  *         name:
  *           type: string
  *           default: "sometest"
  *         role:
  *           type: string
- *           default: "Admin"
+ *           default: "User"
  */
 
 /**
