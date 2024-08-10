@@ -73,7 +73,7 @@ app.get("/api/v1", async (req, res) => {
 });
 
 // cron job to unblock Blogs Editting
-cron.schedule("*/5 * * * *", () => {
+cron.schedule("*/10 * * * *", () => {
   console.log("Running the unlock stale blogs task...");
   unblockStaleBlogs();
 });
