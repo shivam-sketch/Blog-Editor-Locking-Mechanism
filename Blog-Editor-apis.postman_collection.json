@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "33c50ad8-3acc-4753-a0f7-925f69673fcf",
+		"name": "Blog-Editor-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17007014"
+	},
+	"item": [
+		{
+			"name": "blog",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZiNjg2ZTY4NTEwNmM3NDdkZTExMjIwIiwiZW1haWwiOiJzc3Rlc3QyQHlvcG1haWwuY29tIiwicm9sZSI6IlVzZXIifSwiaWF0IjoxNzIzMjcwMjI0LCJleHAiOjE3MjMzNTY2MjR9.NMwRHcoT2YcOekgpa-USLlv1Ofw_QDiKBxLQgSG6lHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"my Second Blog\",\r\n    \"content\": \"Very Good content\",\r\n    \"lastEditedBy\": \"66b71f494dd72560017df42c\",\r\n    \"isLocked\": false,\r\n    \"lockedBy\": \"66b71f494dd72560017df42c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/blog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"blog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZiNjg2ZTY4NTEwNmM3NDdkZTExMjIwIiwiZW1haWwiOiJzc3Rlc3QyQHlvcG1haWwuY29tIiwicm9sZSI6IlVzZXIifSwiaWF0IjoxNzIzMjcwMjI0LCJleHAiOjE3MjMzNTY2MjR9.NMwRHcoT2YcOekgpa-USLlv1Ofw_QDiKBxLQgSG6lHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/blog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"blog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZiNjg2ZTY4NTEwNmM3NDdkZTExMjIwIiwiZW1haWwiOiJzc3Rlc3QyQHlvcG1haWwuY29tIiwicm9sZSI6IlVzZXIifSwiaWF0IjoxNzIzMjcwMjI0LCJleHAiOjE3MjMzNTY2MjR9.NMwRHcoT2YcOekgpa-USLlv1Ofw_QDiKBxLQgSG6lHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/blog/66b7049a848ea01e91055fdd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"66b7049a848ea01e91055fdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZiNjg2ZTY4NTEwNmM3NDdkZTExMjIwIiwiZW1haWwiOiJzc3Rlc3QyQHlvcG1haWwuY29tIiwicm9sZSI6IlVzZXIifSwiaWF0IjoxNzIzMjcwMjI0LCJleHAiOjE3MjMzNTY2MjR9.NMwRHcoT2YcOekgpa-USLlv1Ofw_QDiKBxLQgSG6lHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"66b7049a848ea01e91055fdd\",\r\n    \"title\":\"I am Editing\",\r\n    \"content\":\"good good good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/blog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sj2\",\r\n    \"email\": \"sstest3@yopmail.com\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sstest2@yopmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -27,7 +27,7 @@ This is a full-stack web application that allows users to log in, view a list of
     ```
 
 3.  Set up environment variables:
-    Create a `.env` file in the server directory and add the following or copy the contents
+    Create a `.env` file in the server directory and add the following or copy the contents of .env_local file
 
         ```env
         PORT=5000
