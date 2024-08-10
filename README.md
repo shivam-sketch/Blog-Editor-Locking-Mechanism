@@ -1,6 +1,6 @@
 # Blog-Editor-Locking-Mechanism
 
-This is a full-stack web application that allows users to log in, view a list of blogs, and edit a blog post. The application ensures that only one user can edit a blog at a time using a locking mechanism. The lock is automatically released after a period of inactivity.
+This is a full-stack web application that allows users to log in, view a list of blogs, and edit a blog post. The application ensures that only one user can edit a blog at a time using a locking mechanism. The lock is automatically released after a period of inactivity of 10 minutes.
 
 ## Table of Contents
 
@@ -38,9 +38,36 @@ This is a full-stack web application that allows users to log in, view a list of
         ```
 
 4.  Run the application both frontend and backend :
-   ```bash
-   npm start
-   ```
+
+```bash
+npm start
+```
 
 ## Usage
 
+You can Login with these test credentials to test the application
+
+```
+1. {
+email : sstest1@yopmail.com,
+password : 12345
+
+}
+
+2. {
+email : sstest2@yopmail.com,
+password : 12345
+
+}
+
+```
+ ### Access the Application
+Once both the backend and frontend are running:
+
+Open your browser and navigate to http://localhost:3000 to access the frontend.
+You can log in, view blogs, and edit them as per the application functionality.
+
+
+### Additional Information
+The blog locking mechanism is implemented using a timestamp that checks for inactivity. The lock is automatically released after the specified LOCK_TIMEOUT duration.
+The project uses node-cron to periodically unlock blogs that have been locked due to inactivity.
